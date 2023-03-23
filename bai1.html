@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương trình đảo ngược</title>
+</head>
+<body>
+    <h1>Bài 1 viết chương trình đào ngược</h1>
+    <script>
+        function daonguocStr(str){
+            let strNew="";
+            for( let i=str.length-1 ; i>=0; i--){
+                strNew += str[i]
+            }
+            return strNew;
+        }
+        let str="program"
+        let strNew = daonguocStr(str)
+       document.write(strNew)
+    </script>
+</body>
+</html>

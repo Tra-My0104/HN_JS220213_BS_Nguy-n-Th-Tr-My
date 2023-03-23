@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Viết một chương sắp xếp các phần tử là số ở trong mảng theo thứ tự tăng dần</h2>
+    <script>
+        let arr=[6,4,5,2,3,1]
+        let a=arrayLetter(arr)
+        function arrayLetter(arr){
+            let result=[]
+            while(arr.length){
+                result.push(arr.pop())
+            }
+            return result;
+        }
+        document.write(a)
+        
+    </script>
+</body>
+</html>

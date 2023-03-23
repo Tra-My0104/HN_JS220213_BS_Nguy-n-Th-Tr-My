@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Viết 1 chương trình với đầu vào là 1 chuỗi ký tự và in ra chuỗi đó với các ký tự đầu
+        của chữ mỗi chữ được viết hoa.
+    </h2>
+    <script>
+        let str = "this is A Test";
+        let functionStr = strLetters(str);
+        function strLetters(str) {
+            let words = str.split(" ");  
+            for (let i = 0; i < words.length; i++) {
+                let word = words[i];
+                words[i] = word.charAt(0).toUpperCase() + word.slice(1);  
+            }
+            return words.join(" "); 
+        }
+        document.write(functionStr)
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tạo một mảng gồm 3 nhân viên Rikkei Academy (tên nhân viên). Xây dựng chương
+        trình quản lý nhân viên với các chức năng
+    </h1>
+    <h2>Quản lý nhân viên</h2>
+    <label>Nhập tên nhân viên</label>
+    <input type="text" id="inputName">
+
+    <button onclick="addNv()">Add</button>
+    <h3>Quản lý nhân viên</h3>
+    <table id="tableNv">
+        <!-- <tr>
+            <td>Tên nhân viên</td>
+        </tr> -->
+    </table>
+    <script>
+        let listName = ["nhân viên số 1", "nhân viên số 2", "nhân viên số 3"]
+        function addNv() {
+            let nameNv = document.getElementById("inputName").value;
+            listName.push(name)
+            renderNv()
+        }
+        function renderNv() {
+            let result = "";
+            for (i = 0; i < listName.length; i++) {
+                result +=
+                    `
+            <tr>
+               <td>${listName[i]}</td>
+               <td><button onclick="Edit(${i})">Edit</button></td>
+               <td><button onclick="Delete(${i})">delete</button></td>
+            </tr>
+          `
+            }
+            document.getElementById("tableNv").innerHTML = result;
+        }
+        renderNv();
+
+        function Delete(id) {
+            listName.splice(id, 1)
+            renderNv();
+        }
+        function Edit(id){
+           let nameChange= prompt("nhập thông tin muốn thay đổi")
+           listName.splice(id, 1, nameChange);
+           renderNv();
+        }
+
+    </script>
+
+</body>
+
+</html>
